@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest.it</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
+
+    <!-- Estilos home -->
+    <link rel="stylesheet" href="css/home.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                <img src="assets/icon.png" alt="" class="logo">
+                <p>Quest.it</p>
+            </div>
+        </div>
+        <div class="body">
+            <div class="content">
+                <div class="play" id="play_btn">
+                    <img src="assets/play.png" alt="" class="play_icon">
+                    Play
+                </div>
+                <div class="play" id="credits_btn">
+                    <img src="assets/creditos.png" alt="" class="play_icon">
+                    Credits
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal teams-->
+    <div class="modal" id="teams-modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <p>Enter the name of the 4 teams</p>
+            <div class="teams">
+                Team 1
+                <input type="text" id="team1">
+                Team 2
+                <input type="text" id="team2">
+                Team 3
+                <input type="text" id="team3">
+                Team 4
+                <input type="text" id="team4">
+                <button class="done_btn" id="done_btn">
+                    DONE!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal credits -->
+    <div class="modal" id="credits-modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal_credits()">&times;</span>
+            <p>Teamwork</p>
+            <div class="teams">
+                <div>Andres Tapias - 2059481</div>
+                <div>Marlon Zambrano - 2059431</div>
+                <div>1</div>
+                <div>1</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- Modal js -->
+<script src="js/home.js"></script>
+
+<!-- Main js -->
+<script src="js/main.js"></script>
