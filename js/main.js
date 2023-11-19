@@ -8,8 +8,8 @@ document.getElementById('done_btn').addEventListener('click', function(){
     let team_4 = document.getElementById('team4').value
 
     if(team_1 === '' || team_2 === '' || team_3 === '' || team_4 === ''){
-
-        return;
+        
+        return; 
     }
     teams.push(team_1, team_2, team_3, team_4)
     console.log(teams)
