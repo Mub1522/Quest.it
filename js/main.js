@@ -1,10 +1,12 @@
 /* Teams */
+/* Inicializar valores */
 const teams = []
 const puntajes = []
 
 console.log(teams)
 console.log(puntajes)
 
+/* Iniciar el juego */
 document.getElementById('done_btn').addEventListener('click', function () {
     let team_1 = document.getElementById('team1').value
     let team_2 = document.getElementById('team2').value
@@ -16,9 +18,11 @@ document.getElementById('done_btn').addEventListener('click', function () {
         return
     }
 
+    /* Crear equipos y puntajes por equipo */
     teams.push(team_1, team_2, team_3, team_4)
     puntajes.push([0], [0], [0], [0])
 
+    /* Redireccionar a la primera pregunta */
     if (teams.length === 4 && puntajes.length === 4) {
         window.location.href = 'answer_one.html?teams=' + encodeURIComponent(teams) + '&puntajes=' + encodeURIComponent(puntajes);
     } else {

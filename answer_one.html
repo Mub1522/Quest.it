@@ -10,29 +10,82 @@
 
     <!-- Estilos pagina de preguntas -->
     <link rel="stylesheet" href="css/page_questions.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="question-header">
             <div class="question">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, incidunt! Nobis rerum voluptates
-                dolorum ut molestias nisi ex eveniet maiores illum? Placeat, incidunt possimus. Reiciendis reprehenderit
-                aliquam sed. Aliquid, reiciendis?
+                ¿Cuál de las siguientes es una práctica de gestión de calidad que se utiliza comúnmente en el sector de
+                desarrollo de software?
             </div>
         </div>
         <div class="actions">
-            <div class="action1"><img class="act" src="assets/question.png" alt=""></div>
+            <div class="action1"><img id="quest_btn" class="act" src="assets/question.png" alt=""></div>
             <div class="action1"><a href="index.html"><img class="act" src="assets/salida.png" alt=""></a></div>
         </div>
         <div class="question-body">
-            <div class="answer answer1">1</div>
-            <div class="answer answer2">2</div>
-            <div class="answer answer3">3</div>
-            <div class="answer answer4">4</div>
+            <div class="answer answer1" id="correct">1. Inspección de código</div>
+            <div class="answer answer2" id="incorrect1">2. Desarrollo dirigido por pruebas</div>
+            <div class="answer answer3" id="incorrect2">3. Control de versiones</div>
+            <div class="answer answer4" id="incorrect3">4. Integración continua</div>
+        </div>
+    </div>
+    <!-- Modal question -->
+    <div class="modal" id="quest-modal" style="display: block;">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <p>En una empresa de software, el equipo de desarrollo estaba trabajando en una nueva aplicación de comercio
+                electrónico. El equipo estaba utilizando una serie de prácticas de gestión de calidad, incluida la
+                inspección de código.
+                <br>
+                Un día, un desarrollador estaba inspeccionando el código de otro desarrollador cuando encontró un error.
+                El error podría haber causado que la aplicación se bloqueara o que los datos se corrompieran.
+                <br>
+                El desarrollador informó del error al equipo. El equipo trabajó para corregir el error y luego volvió a
+                inspeccionar el código para asegurarse de que no había otros errores.
+                <br>
+                Gracias a la inspección de código, el equipo pudo evitar que un error importante llegara a la
+                aplicación. Esto ayudó a garantizar que la aplicación fuera de alta calidad y que los clientes pudieran
+                usarla de forma segura.
+            </p>
+            <div class="img_quest">
+                <img src="assets/code.png" alt="" style="height: 50px;">
+            </div>
         </div>
     </div>
 
+    <!-- Modal respuesta correcta -->
+    <div class="modal" id="correct-modal">
+        <div class="modal-content correct">
+            <p style="color: red;"><strong>Que equipo respondio correctamente?</strong></p>
+            <div class="team-correct">
+                <div class="ct">
+                    <strong>Equipo 1</strong>
+                </div>
+                <div class="ct">
+                    <strong>Equipo 2</strong>
+                </div>
+                <div class="ct">
+                    <strong>Equipo 3</strong>
+                </div>
+                <div class="ct">
+                    <strong>Equipo 4</strong>
+                </div>
+            </div>
+            <button class="done_btn" id="done_btn">
+                VAMOS!
+            </button>
+        </div>
+    </div>
 </body>
 
 </html>

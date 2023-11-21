@@ -1,8 +1,28 @@
 /* Normalize */
 body {
-    background-color: #E1D1CB;
+    font-family: 'Roboto', sans-serif;
+
     margin: 0;
     padding: 0;
+}
+
+/* Background */
+html {
+    --s: 82px;
+    /* control the size */
+    --c1: #b2b2b2;
+    --c2: #ffffff;
+    --c3: #d9d9d9;
+
+    --_g: var(--c3) 0 120deg, #0000 0;
+    background:
+        conic-gradient(from -60deg at 50% calc(100%/3), var(--_g)),
+        conic-gradient(from 120deg at 50% calc(200%/3), var(--_g)),
+        conic-gradient(from 60deg at calc(200%/3), var(--c3) 60deg, var(--c2) 0 120deg, #0000 0),
+        conic-gradient(from 180deg at calc(100%/3), var(--c1) 60deg, var(--_g)),
+        linear-gradient(90deg, var(--c1) calc(100%/6), var(--c2) 0 50%,
+            var(--c1) 0 calc(500%/6), var(--c2) 0);
+    background-size: calc(1.732*var(--s)) var(--s);
 }
 
 /* Contenedor padre */
@@ -16,12 +36,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 45vh;
     width: 100%;
 }
 
 /* Question */
-.question{
+.question {
     background-color: #BC988A;
     display: flex;
     justify-content: center;
@@ -33,12 +54,12 @@ body {
     box-shadow: #DAC6BE -5px 5px, #CBAFA4 -10px 10px;
 }
 
-.question:hover{
+.question:hover {
     width: 80%;
 }
 
 /* Actions body */
-.actions{
+.actions {
     height: 10%;
     display: flex;
     justify-content: space-evenly;
@@ -46,13 +67,13 @@ body {
 }
 
 /* Actions */
-.act{
-    height: 20px;
+.act {
+    height: 50px;
     margin-top: 5px;
 }
 
-.act:hover{
-    height: 25px;
+.act:hover {
+    height: 55px;
 }
 
 /* Body answers */
@@ -68,8 +89,12 @@ body {
 }
 
 /* Answers */
-.answer1, .answer2, .answer3, .answer4 {
-    flex: 1; /* Distribuir el espacio disponible entre las respuestas */
+.answer1,
+.answer2,
+.answer3,
+.answer4 {
+    flex: 1;
+    /* Distribuir el espacio disponible entre las respuestas */
     box-shadow: #DB3A34 -5px 5px, #DB3A34 -10px 10px;
     text-align: center;
     height: 50%;
@@ -84,22 +109,130 @@ body {
 }
 
 /* Answer 1 */
-.answer1{
+.answer1 {
     box-shadow: #577559 -5px 5px, #4E6A50 -10px 10px;
     background-color: #648767;
 }
+
 /* Answer 2 */
-.answer2{
+.answer2 {
     box-shadow: #DA352F -5px 5px, #D02A25 -10px 10px;
     background-color: #C3423F;
 }
+
 /* Answer 3 */
-.answer3{
+.answer3 {
     box-shadow: #3C68E2 -5px 5px, #2050D5 -10px 10px;
     background-color: #7494EA;
 }
+
 /* Answer 4 */
-.answer4{
+.answer4 {
     box-shadow: #FFC247 -5px 5px, #F5A300 -10px 10px;
     background-color: #F39237;
+}
+
+/* Modal estilos */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.img_quest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Modal respuesta correcta estilos */
+.correct {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.team-correct {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 15px;
+    align-items: center;
+}
+
+.ct {
+    border: 0.1px #C1292E solid;
+    background-color: #F0E8E5;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+    box-shadow: #FFFFFF -5px 5px, #C1292E -10px 10px;
+    border-radius: 20px;
+    padding: 10px 50px;
+    height: 10%;
+    width: 15%;
+}
+
+.ct:hover{
+    width: 20%;
+}
+
+.ct strong{
+    color:red;
+}
+
+/* btn done */
+.done_btn {
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+.done_btn:hover,
+.done_btn:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+}
+
+.done_btn:active {
+    opacity: .5;
 }
