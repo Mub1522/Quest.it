@@ -97,11 +97,14 @@ for (let index = 0; index < teams_finally.length; index++) {
         let team_winner = teams_finally[index].getAttribute('data-id');
         console.log(team_winner)
         puntajes[team_winner] = puntajes[team_winner] + 1
-        next_question()
+        cambiarPagina()
     })
 }
 
-function next_question(){
+function cambiarPagina() {
     const url = `final.html?teams=${JSON.stringify(teams)}&puntajes=${JSON.stringify(puntajes)}`;
-    window.location.href = url
+    document.body.classList.add('fadeOut');
+    setTimeout(() => {
+        window.location.href = url;
+    }, 800);
 }

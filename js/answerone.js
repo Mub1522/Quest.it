@@ -2,8 +2,8 @@ import { localhost } from './config.js';
 
 const urlParams = new URLSearchParams(window.location.search);
 
-const teamsString  = urlParams.get('teams');
-const puntajesString  = urlParams.get('puntajes');
+const teamsString = urlParams.get('teams');
+const puntajesString = urlParams.get('puntajes');
 
 const teams = JSON.parse(teamsString);
 const puntajes = JSON.parse(puntajesString);
@@ -77,15 +77,15 @@ document.getElementById('correct').addEventListener('click', function () {
 let soundEffects = document.getElementsByClassName('sound_effect');
 
 for (let i = 0; i < soundEffects.length; i++) {
-  soundEffects[i].addEventListener("mouseover", function() {
-    let audio = new Audio(`${localhost}/sounds/pop.flac`);
-    audio.play();
-  });
+    soundEffects[i].addEventListener("mouseover", function () {
+        let audio = new Audio(`${localhost}/sounds/pop.flac`);
+        audio.play();
+    });
 }
 
 let done_btn_sound = document.getElementById('done_btn')
 
-done_btn_sound.addEventListener('click', function(){
+done_btn_sound.addEventListener('click', function () {
     let audio_done = new Audio(`${localhost}/sounds/done.flac`)
     audio_done.play()
 })
@@ -93,15 +93,18 @@ done_btn_sound.addEventListener('click', function(){
 let teams_finally = document.getElementsByClassName('ct')
 
 for (let index = 0; index < teams_finally.length; index++) {
-    teams_finally[index].addEventListener('click', function(){
+    teams_finally[index].addEventListener('click', function () {
         let team_winner = teams_finally[index].getAttribute('data-id');
         console.log(team_winner)
         puntajes[team_winner] = puntajes[team_winner] + 1
-        next_question()
+        cambiarPagina()
     })
 }
 
-function next_question(){
+function cambiarPagina() {
     const url = `answer_two.html?teams=${JSON.stringify(teams)}&puntajes=${JSON.stringify(puntajes)}`;
-    window.location.href = url
+    document.body.classList.add('fadeOut');
+    setTimeout(() => {
+        window.location.href = url;
+    }, 800);
 }
