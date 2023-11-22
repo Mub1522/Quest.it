@@ -24,7 +24,7 @@
     }
 
     .header {
-        border: 0.1px #C1292E solid;
+
         height: 40vh;
         display: flex;
         justify-content: center;
@@ -33,7 +33,6 @@
     }
 
     .title {
-        border: 0.1px #C1292E solid;
         background-color: #F0E8E5;
         display: flex;
         justify-content: space-evenly;
@@ -51,7 +50,7 @@
     }
 
     .content {
-        border: 0.1px #C1292E solid;
+
         height: 60vh;
         display: flex;
         flex-direction: column;

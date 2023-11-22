@@ -23,7 +23,7 @@
 <body>
     <div class="container">
         <div class="question-header">
-            <div class="question">
+            <div class="question sound_effect">
                 ¿Cuál de las siguientes es una práctica de gestión de calidad que se utiliza comúnmente en el sector de
                 desarrollo de software?
             </div>
@@ -33,16 +33,16 @@
             <div class="action1"><a href="index.html"><img class="act" src="assets/salida.png" alt=""></a></div>
         </div>
         <div class="question-body">
-            <div class="answer answer1" id="correct">1. Inspección de código</div>
-            <div class="answer answer2" id="incorrect1">2. Desarrollo dirigido por pruebas</div>
-            <div class="answer answer3" id="incorrect2">3. Control de versiones</div>
-            <div class="answer answer4" id="incorrect3">4. Integración continua</div>
+            <div class="answer answer1 sound_effect" id="correct">1. Inspección de código</div>
+            <div class="answer answer2 sound_effect" id="incorrect1">2. Desarrollo dirigido por pruebas</div>
+            <div class="answer answer3 sound_effect" id="incorrect2">3. Control de versiones</div>
+            <div class="answer answer4 sound_effect" id="incorrect3">4. Integración continua</div>
         </div>
     </div>
     <!-- Modal question -->
     <div class="modal" id="quest-modal" style="display: block;">
         <div class="modal-content">
-            <span class="close" onclick="cerrarModal()">&times;</span>
+            <span class="close" id="modal_quest">&times;</span>
             <p>En una empresa de software, el equipo de desarrollo estaba trabajando en una nueva aplicación de comercio
                 electrónico. El equipo estaba utilizando una serie de prácticas de gestión de calidad, incluida la
                 inspección de código.
@@ -68,16 +68,16 @@
         <div class="modal-content correct">
             <p style="color: red;"><strong>Que equipo respondio correctamente?</strong></p>
             <div class="team-correct">
-                <div class="ct">
+                <div class="ct sound_effect" data-id="0">
                     <strong>Equipo 1</strong>
                 </div>
-                <div class="ct">
+                <div class="ct sound_effect" data-id="1">
                     <strong>Equipo 2</strong>
                 </div>
-                <div class="ct">
+                <div class="ct sound_effect" data-id="2">
                     <strong>Equipo 3</strong>
                 </div>
-                <div class="ct">
+                <div class="ct sound_effect" data-id="3">
                     <strong>Equipo 4</strong>
                 </div>
             </div>
@@ -90,4 +90,4 @@
 
 </html>
 
-<script src="js/answerone.js"></script>
+<script src="js/answerone.js" type="module"></script>

@@ -10,28 +10,81 @@
 
     <!-- Estilos pagina de preguntas -->
     <link rel="stylesheet" href="css/page_questions.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="question-header">
-            <div class="question">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, incidunt! Nobis rerum voluptates
-                dolorum ut molestias nisi ex eveniet maiores illum? Placeat, incidunt possimus. Reiciendis reprehenderit
-                aliquam sed. Aliquid, reiciendis?
+            <div class="question sound_effect">
+                ¿Cuál de los siguientes es un objetivo de la gestión de calidad en la empresa desarrolladora?
             </div>
         </div>
         <div class="actions">
-            <div class="action1"><img class="act" src="assets/question.png" alt=""></div>
+            <div class="action1"><img id="quest_btn" class="act" src="assets/question.png" alt=""></div>
+            <div class="action1"><a href="index.html"><img class="act" src="assets/salida.png" alt=""></a></div>
         </div>
         <div class="question-body">
-            <div class="answer answer1">1</div>
-            <div class="answer answer2">2</div>
-            <div class="answer answer3">3</div>
-            <div class="answer answer4">4</div>
+            <div class="answer answer1 sound_effect" id="incorrect3">1. Asegurar que la aplicación sea fácil de usar y agradable de usar.
+            </div>
+            <div class="answer answer2 sound_effect" id="incorrect1">2. Asegurar que la aplicación sea compatible con todos los dispositivos móviles.
+            </div>
+            <div class="answer answer3 sound_effect" id="incorrect2">3. Asegurar que la aplicación sea segura y no contenga vulnerabilidades.
+            </div>
+            <div class="answer answer4 sound_effect" id="correct">4. Asegurar que la aplicación cumpla con los requisitos y expectativas de los usuarios.</div>
+        </div>
+    </div>
+    <!-- Modal question -->
+    <div class="modal" id="quest-modal" style="display: block;">
+        <div class="modal-content">
+            <span class="close" id="modal_quest">&times;</span>
+            <p>Una empresa de desarrollo de software está desarrollando una nueva aplicación móvil, el equipo de gestión
+                de calidad está trabajando para asegurarse de que la aplicación cumpla con los estándares de calidad,
+                realizan pruebas en la aplicación para evaluar su funcionalidad, rendimiento y seguridad, también
+                recopilan comentarios de los usuarios para comprender sus necesidades y expectativas.
+                <br>
+                El equipo de gestión de calidad utiliza los resultados de sus pruebas y comentarios para identificar
+                cualquier área de mejora. Luego, trabajan con el equipo de desarrollo para implementar las mejoras
+                necesarias.
+            </p>
+            <div class="img_quest">
+                <img src="assets/movil.png" alt="" style="height: 50px;">
+            </div>
         </div>
     </div>
 
+    <!-- Modal respuesta correcta -->
+    <div class="modal" id="correct-modal">
+        <div class="modal-content correct">
+            <p style="color: red;"><strong>Que equipo respondio correctamente?</strong></p>
+            <div class="team-correct">
+                <div class="ct sound_effect" data-id="0">
+                    <strong>Equipo 1</strong>
+                </div>
+                <div class="ct sound_effect" data-id="1">
+                    <strong>Equipo 2</strong>
+                </div>
+                <div class="ct sound_effect" data-id="2">
+                    <strong>Equipo 3</strong>
+                </div>
+                <div class="ct sound_effect" data-id="3">
+                    <strong>Equipo 4</strong>
+                </div>
+            </div>
+            <button class="done_btn" id="done_btn">
+                VAMOS!
+            </button>
+        </div>
+    </div>
 </body>
 
 </html>
+
+<script src="js/answerfour.js" type="module"></script>

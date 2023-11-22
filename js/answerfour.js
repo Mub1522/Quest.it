@@ -102,6 +102,6 @@ for (let index = 0; index < teams_finally.length; index++) {
 }
 
 function next_question(){
-    const url = `answer_two.html?teams=${JSON.stringify(teams)}&puntajes=${JSON.stringify(puntajes)}`;
+    //const url = `answer_four.html?teams=${JSON.stringify(teams)}&puntajes=${JSON.stringify(puntajes)}`;
     window.location.href = url
 }
