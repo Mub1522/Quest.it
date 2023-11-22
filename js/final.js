@@ -24,6 +24,10 @@ for (let i = 0; i < soundEffects.length; i++) {
   });
 }
 
+document.getElementById('myTrySound').addEventListener('click', function(){
+  window.location.href = `${localhost}/index.html`;
+})
+
 let winner_team = document.getElementById('winner')
 
 const maximo = Math.max(...puntajes);
