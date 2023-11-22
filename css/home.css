@@ -45,6 +45,10 @@
         width: 60%;
     }
 
+    .title_final{
+        font-size: 40px;
+    }
+
     .title:hover {
         width: 65%;
     }
@@ -76,12 +80,29 @@
         width: 10%;
     }
 
+    .play_final{
+        border: 0px black solid;
+        background-color: #C9AC2C;
+        box-shadow: #E2CE79 -5px 5px, #A78F25 -10px 10px;
+        height: 50%;
+        width: 70%;
+        font-size: 40px;
+    }
+
     .play:hover {
         width: 15%;
     }
 
+    .play_final:hover {
+        width: 80%;
+    }
+
     .play_icon {
         height: 20px;
+    }
+
+    .play_icon_final {
+        height: 60px;
     }
 
     /* Modal estilos */

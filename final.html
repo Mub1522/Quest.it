@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest.it</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
+
+    <!-- Estilos home -->
+    <link rel="stylesheet" href="css/home.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title sound_effect title_final" id="myTrySound">
+                <img src="assets/icon.png" alt="" class="logo">
+                <p>Gracias por jugar!</p>
+            </div>
+        </div>
+        <div class="body">
+            <div class="content">
+                <div class="play sound_effect play_final" id="play_btn">
+                    <img src="assets/trofeo.png" alt="" class="play_icon_final">
+                    Ganador: <span id="winner"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/final.js" type="module"></script>
+
+</html>
